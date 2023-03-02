@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/Imge">
+        <file>Imge/me-1.png</file>
+        <file>Imge/syetem-active.png</file>
+    </qresource>
+</RCC>
