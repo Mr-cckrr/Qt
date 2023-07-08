@@ -16,6 +16,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
@@ -32,6 +33,10 @@ public:
     QAction *actionclose_2;
     QWidget *centralwidget;
     QTextEdit *textEdit;
+    QPushButton *pushButton_color;
+    QPushButton *pushButton_file;
+    QPushButton *pushButton_font;
+    QPushButton *pushButton_input;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menu_2;
@@ -45,7 +50,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(1279, 629);
         actionopen = new QAction(MainWindow);
         actionopen->setObjectName(QString::fromUtf8("actionopen"));
         actionnew = new QAction(MainWindow);
@@ -59,10 +64,22 @@ public:
         textEdit = new QTextEdit(centralwidget);
         textEdit->setObjectName(QString::fromUtf8("textEdit"));
         textEdit->setGeometry(QRect(0, 0, 701, 521));
+        pushButton_color = new QPushButton(centralwidget);
+        pushButton_color->setObjectName(QString::fromUtf8("pushButton_color"));
+        pushButton_color->setGeometry(QRect(750, 20, 93, 29));
+        pushButton_file = new QPushButton(centralwidget);
+        pushButton_file->setObjectName(QString::fromUtf8("pushButton_file"));
+        pushButton_file->setGeometry(QRect(910, 20, 93, 29));
+        pushButton_font = new QPushButton(centralwidget);
+        pushButton_font->setObjectName(QString::fromUtf8("pushButton_font"));
+        pushButton_font->setGeometry(QRect(750, 80, 93, 29));
+        pushButton_input = new QPushButton(centralwidget);
+        pushButton_input->setObjectName(QString::fromUtf8("pushButton_input"));
+        pushButton_input->setGeometry(QRect(910, 80, 93, 29));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
+        menubar->setGeometry(QRect(0, 0, 1279, 26));
         menu = new QMenu(menubar);
         menu->setObjectName(QString::fromUtf8("menu"));
         menu_2 = new QMenu(menubar);
@@ -110,6 +127,10 @@ public:
         actionnew->setText(QCoreApplication::translate("MainWindow", "\346\226\260\345\273\272\346\226\207\344\273\266", nullptr));
         actionrevocation->setText(QCoreApplication::translate("MainWindow", "\346\222\244\351\224\200", nullptr));
         actionclose_2->setText(QCoreApplication::translate("MainWindow", "\345\205\263\351\227\255\346\226\207\344\273\266", nullptr));
+        pushButton_color->setText(QCoreApplication::translate("MainWindow", "\351\242\234\350\211\262\345\257\271\350\257\235\346\241\206", nullptr));
+        pushButton_file->setText(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266\345\257\271\350\257\235\346\241\206", nullptr));
+        pushButton_font->setText(QCoreApplication::translate("MainWindow", "\345\255\227\344\275\223\345\257\271\350\257\235\346\241\206", nullptr));
+        pushButton_input->setText(QCoreApplication::translate("MainWindow", "\350\276\223\345\205\245\345\257\271\350\257\235\346\241\206", nullptr));
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266(&F)", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\347\274\226\350\276\221(&E)", nullptr));
         menugouj->setTitle(QCoreApplication::translate("MainWindow", "\346\236\204\345\273\272(&B)", nullptr));
